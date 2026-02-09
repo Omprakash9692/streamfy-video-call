@@ -2,6 +2,7 @@ import { Navigate, Route, Routes } from "react-router";
 import { useEffect } from "react";
 
 import HomePage from "./pages/HomePage.jsx";
+import FriendsPage from "./pages/FriendsPage.jsx";
 import SignUpPage from "./pages/SignUpPage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import NotificationsPage from "./pages/NotificationsPage.jsx";
@@ -62,7 +63,7 @@ const App = () => {
           element={
             isAuthenticated && isOnboarded ? (
               <Layout showSidebar={true}>
-                <HomePage />
+                <FriendsPage />
               </Layout>
             ) : (
               <Navigate to={!isAuthenticated ? "/login" : "/onboarding"} />
